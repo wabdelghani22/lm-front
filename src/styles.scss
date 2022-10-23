@@ -1,0 +1,300 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variables';
+@import "~@ng-select/ng-select/scss/default.theme"; // @import './assets/scss/custom/rtl/_bootstrap-rtl';
+
+//Conflit entre bootstrap et ngx-toastr
+#toast-container > div {
+  opacity: 1;
+}
+
+// Fix for spinner
+.row > * {
+  position: static !important;
+}
+
+.bg-keolis {
+  background-color: $keolisBlue !important;
+  color: $white !important;
+}
+
+.color-keolis {
+  color: $keolisBlue !important;
+}
+$ng-select-highlight: $keolisBlue !default;
+$ng-select-selected: $keolisBlue !default;
+
+.ng-select .ng-dropdown-panel .ng-option.ng-option-marked {
+  background-color: $keolisBlue !important;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #f46a6a !important;
+}
+
+.navbar-brand-box,
+.vertical-menu {
+  background: $sidebar-dark-bg !important;
+}
+
+.vertical-collpsed .vertical-menu #sidebar-menu {
+  > ul > li:hover > a {
+    background: lighten($sidebar-dark-bg, 2%) !important;
+    color: #bfc8e2 !important;
+  }
+
+  ul li.mm-active a.active span {
+    color: $sidebar-dark-menu-item-active-color !important;
+  }
+}
+
+.card h5, .card h4 {
+  font-size: 150%;
+}
+
+.table {
+  > thead, > tbody {
+    vertical-align: middle !important;
+    text-align: center !important;
+  }
+
+  .form-check-input {
+    cursor: pointer;
+    border: 1px solid #a6b0cf;
+    transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form-check-input:checked {
+    background-color: $keolisBlue !important;
+    border-color: $keolisBlue !important;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $keolisBlue !important;
+  border-color: $keolisBlue !important;
+}
+
+.page-item {
+  cursor: pointer !important;
+}
+
+.avatar-title {
+  background-color: #7bb51c !important;
+}
+
+.loading-text {
+  font-size: 22px;
+}
+
+mat-form-field {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 0.25em !important;
+}
+
+mat-chip {
+  background-color: $keolisBlue !important;
+  color: $white !important;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #3b98ad !important;
+  }
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0px !important;
+}
+
+.mat-form-field-infix {
+  border-top: none !important;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+  opacity: 1 !important;
+}
+
+ul.pagination {
+  margin-bottom: 0px;
+}
+
+body[data-theme = 'dark'] {
+  background-color: #222736;
+
+  h4, h5 {
+    color: $white;
+  }
+
+  .card {
+    background-color: #2a3042;
+
+    .card-title {
+      color: $white;
+    }
+  }
+
+  .text-muted {
+    color: #c3cbe4 !important;
+  }
+
+  //Select
+  .form-select {
+    background-color: #2e3446;
+    color: #bfc8e2;
+    border: 1px solid #32394e;
+    cursor: pointer;
+    background-image: url("assets/images/flèche.svg") !important;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+  }
+
+  .form-floating > label {
+    color: #a6b0cf;
+  }
+
+  .dropzone.is-invalid {
+    border: 2px dashed #f46a6a !important;
+  }
+
+  .dropzone {
+    border: 2px dashed #a6b0cf !important;
+    background: #2a3042 !important;
+
+    .dz-wrapper {
+      border: none !important;
+    }
+
+    .dz-message {
+      border: none !important;
+      background: #2a3042 !important;
+      color: #bfc8e2 !important;
+    }
+  }
+
+  .form-control {
+    background-color: #2e3446;
+    color: #bfc8e2;
+    border: 1px solid #32394e;
+
+    &:focus {
+      background-color: #303648;
+      border-color: #363d52;
+    }
+
+    &::placeholder {
+      color: #bfc8e2;
+    }
+  }
+
+  .table {
+    color: #a6b0cf;
+    border-color: #32394E;
+
+    th {
+        font-weight: bold;
+    }
+
+    > :not(:first-child) {
+      border-top: none;
+    }
+
+    .table-light th {
+      color: #a6b0cf;
+      border-color: #32394e !important;
+      background-color: #32394E !important;
+    }
+
+    .form-check-input {
+      background-color: #32394e;
+    }
+  }
+
+  .table-bordered {
+    border: 2px solid #32394e;
+
+    td,
+    th {
+      border: 2px solid #32394e;
+      color: #bfc8e2;
+    }
+  }
+
+  .dataTables_info, .dataTables_length {
+    color: #bfc8e2;
+  }
+
+  .loading-text {
+    color: #bfc8e2;
+  }
+
+  .page-item .page-link {
+      color: #bfc8e2;
+      background-color: #222736;
+      border-color: #222736;
+  }
+
+  mat-form-field {
+    background-color: #313749 !important;
+  }
+
+  .mat-input-element {
+    caret-color: #a6b0cf;
+  }
+
+  ::placeholder, input {
+    color: #a6b0cf;
+  }
+
+  .modal-content {
+    background-color: #222736;
+    border-color: #222736;
+
+    .modal-header {
+      border-bottom-color: #2A3042;
+
+      .modal-title {
+        color: #a6b0cf;
+      }
+
+      .btn-close {
+        filter: invert(97%) sepia(30%) saturate(4962%) hue-rotate(175deg) brightness(90%) contrast(78%);
+      }
+    }
+
+    .modal-body {
+      color: #a6b0cf;
+    }
+
+    .modal-footer {
+      border-top-color: #2A3042;
+    }
+  }
+
+  .form-range {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #78BE20; /* Green background */
+  }
+}
+
+body[data-theme = 'light'] {
+  mat-form-field {
+    background-color: #F2F2F5 !important;
+  }
+}

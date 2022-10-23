@@ -1,0 +1,30 @@
+button[type="submit"] {
+  &:hover {
+    background-color: #3b98ad !important;
+  }
+
+  &:focus {
+    background-color: #34879a !important;
+  }
+}
+
+.row > ngx-spinner .la-ball-newton-cradle {
+  top: 25% !important;
+}
+
+dropzone {
+    min-height: 215.5px !important;
+    max-height: 215.5px !important;
+    padding-top: 5% !important;
+    padding-bottom: 0% !important;
+}
+
+.btn-group label {
+  margin-top: 8px;
+}
+
+body[data-theme = 'dark'] {
+  .form-radio-outline .form-check-input:checked {
+    background-color: #2A3042 !important;
+  }
+}

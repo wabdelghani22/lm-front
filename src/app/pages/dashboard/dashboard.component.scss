@@ -1,0 +1,56 @@
+@import '../../../assets/scss/variables';
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: $keolisBlue;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.nav-link:hover, .nav-link:hover {
+  color: $keolisBlue;
+}
+
+body[data-theme = 'dark'] {
+  .nav-pills {
+    background-color: #222736;
+    color: $white;
+  }
+
+  .currentDate {
+    color: #c3cbe4;
+  }
+}
+
+body[data-theme = 'light'] {
+  .nav-pills {
+    background-color: #F8F8FB;
+    color: $white;
+  }
+
+  .currentDate {
+    color: $black;
+  }
+}
+
+.bg-light-dark {
+  background-color: rgba(#2a3042, 0.8);
+  color: white;
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    cursor: pointer;
+    
+    i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}

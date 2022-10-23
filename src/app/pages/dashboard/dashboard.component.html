@@ -1,0 +1,145 @@
+<div class="container-fluid">
+  <div class="row mb-4 align-items-center">
+    <div class="col-sm-6">
+      <div class="page-title-box p-0">
+        <h4 class="mb-0 font-size-18">Tableau de bord</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <label class="col-md-auto col-form-label text-muted" style="font-size: 110%">Sélectionner un établissement :</label>
+        <div class="col-md">
+          <select class="form-select">
+            <option>LMFR_M084-TOURCOING 2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-2 d-flex">
+      <div class="card mini-stats-wid flex-fill">
+        <div class="card-body">
+          <div class="media" style="height: 100%;">
+            <div class="media-body text-center"
+              style="height: 100%; display: flex; flex-direction: column; justify-content: space-around;">
+              <p class="text-muted" style="font-size: 200%; font-weight: bold;">Matricules</p>
+              <h4 class="mb-0" style="font-size: 300%;">203</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 d-flex">
+      <div class="card mini-stats-wid flex-fill">
+        <div class="card-body">
+          <div class="media" style="height: 100%;">
+            <div class="media-body text-center"
+              style="height: 100%; display: flex; flex-direction: column; justify-content: space-around;">
+              <p class="text-muted" style="font-size: 200%; font-weight: bold;">Bulletins</p>
+              <h4 class="mb-0" style="font-size: 300%;">212</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 d-flex">
+      <div class="card mini-stats-wid flex-fill">
+        <div class="card-body">
+          <div class="media" style="height: 100%;">
+            <div class="media-body text-center"
+              style="height: 100%; display: flex; flex-direction: column; justify-content: space-around;">
+              <p class="text-muted" style="font-size: 200%; font-weight: bold;">Effectif</p>
+              <h4 class="mb-0" style="font-size: 300%;">197</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title mb-4">Catégorie</h4>
+          <apx-chart class="apex-charts" dir="ltr" [series]="simplePieChart.series" [chart]="simplePieChart.chart"
+            [labels]="simplePieChart.labels" [legend]="simplePieChart.legend" [colors]="simplePieChart.colors"
+            [responsive]="simplePieChart.responsive">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-10">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title mb-4">Line with Data Labels</h4> -->
+          <apx-chart class="apex-charts" dir="ltr" [series]="linewithDataChart.series" [chart]="linewithDataChart.chart"
+            [colors]="linewithDataChart.colors" [stroke]="linewithDataChart.stroke" [dataLabels]="linewithDataChart.dataLabels"
+            [responsive]="linewithDataChart.responsive" [legend]="linewithDataChart.legend" [xaxis]="linewithDataChart.xaxis"
+            [yaxis]="linewithDataChart.yaxis" [stroke]="linewithDataChart.stroke">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 d-flex flex-column">
+      <div class="card mini-stats-wid flex-fill">
+        <div class="card-body">
+          <div class="media" style="height: 100%;">
+            <div class="media-body text-center"
+              style="height: 100%; display: flex; flex-direction: column; justify-content: space-around;">
+              <p class="text-muted" style="font-size: 150%; font-weight: bold;">Taux d'absentéisme</p>
+              <h4 class="mb-0" style="font-size: 300%;">2 %</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mini-stats-wid flex-fill">
+        <div class="card-body">
+          <div class="media" style="height: 100%;">
+            <div class="media-body text-center"
+              style="height: 100%; display: flex; flex-direction: column; justify-content: space-around;">
+              <p class="text-muted" style="font-size: 150%; font-weight: bold;">Taux de rotation</p>
+              <h4 class="mb-0" style="font-size: 300%;">5 %</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title mb-4">Charges Patronales</h4>
+
+          <apx-chart class="apex-charts" dir="ltr" [series]="chargesPatronalesChart.series" [chart]="chargesPatronalesChart.chart"
+            [plotOptions]="chargesPatronalesChart.plotOptions" [yaxis]="chargesPatronalesChart.yaxis"
+            [grid]="chargesPatronalesChart.grid" [tooltip]="chargesPatronalesChart.tooltip"
+            [stroke]="chargesPatronalesChart.stroke" [dataLabels]="chargesPatronalesChart.dataLabels"
+            [xaxis]="chargesPatronalesChart.xaxis" [colors]="chargesPatronalesChart.colors" [fill]="chargesPatronalesChart.fill">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title mb-4">Charges Salariales</h4>
+
+          <apx-chart class="apex-charts" dir="ltr" [series]="chargesSalarialesChart.series" [chart]="chargesSalarialesChart.chart"
+            [plotOptions]="chargesSalarialesChart.plotOptions" [yaxis]="chargesSalarialesChart.yaxis"
+            [grid]="chargesSalarialesChart.grid" [tooltip]="chargesSalarialesChart.tooltip"
+            [stroke]="chargesSalarialesChart.stroke" [dataLabels]="chargesSalarialesChart.dataLabels"
+            [xaxis]="chargesSalarialesChart.xaxis" [colors]="chargesSalarialesChart.colors" [fill]="chargesSalarialesChart.fill">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

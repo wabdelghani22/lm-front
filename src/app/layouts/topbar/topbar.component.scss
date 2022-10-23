@@ -1,0 +1,53 @@
+.nightmode-switch input {
+    -webkit-appearance: none;
+    position: relative !important;
+    width: 45px !important;
+    height: 20px !important;
+    background-image: url('/assets/images/day.png') !important;
+    background-size: cover;
+    border: none;
+    border-radius: 50px !important;
+    outline: none;
+    transition: background-image .5s !important;
+    box-shadow: 0px 2px 5px 2px gray !important;
+    margin-top: 22px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        transition: all .5s;
+        background-color: #F7CA33;
+    }
+
+    &:checked {
+        background-image: url('/assets/images/night.png') !important;
+        transition: background-image .5s;
+    }
+
+    &:checked::before {
+        transform: translate(124%);
+        transition: all .5s;
+        background-color: #ECF0F3;
+    }
+}
+
+.navbar-brand-box {
+  padding: 0px !important;
+}
+
+body[data-theme = 'dark'] {
+  header {
+    background-color: #262B3C !important;
+  }
+
+  .noti-icon i, .header-item {
+      color: #a6b0cf;
+  }
+}
