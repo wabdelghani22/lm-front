@@ -30,13 +30,20 @@ export class ApiService {
        
      }
   
-      getAllEmployees(){
+  getAllEmployees(){
       return this.http.get('http://127.0.0.1:5000/employees');
   }
 
+getMasse(){
+    return this.http.get('http://127.0.0.1:5000/masse');
+}
+
+getBPDetails(matricule, bulletin, contrat){
+  return this.http.get('http://127.0.0.1:5000/bulletin?matricule='+matricule+'&bulletin='+bulletin+'&contrat='+contrat);
+}
   // Tableau de bord
-  getDashbordData() {
-    return this.http.get(`${this.apiUrl}/dashboard`, this.httpOptions)
+getDashbordData(etablissement) {
+    return this.http.get('http://127.0.0.1:5000/dashboard?etablissement='+etablissement)
   }
 
   // Contrôles d'intégrité

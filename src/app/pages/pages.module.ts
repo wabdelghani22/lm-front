@@ -20,9 +20,10 @@ import { RubriquesComponent } from './rubriques/rubriques.component';
 import { MontantsComponent } from './montants/montants.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BulletinComponent } from './bulletin/bulletin.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent],
   imports: [
     CommonModule,
     FormsModule,

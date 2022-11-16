@@ -13,8 +13,9 @@ import { ApiService } from 'src/app/core/services/api.service';
 })
 export class MasseComponent implements OnInit {
 
-  data1
+  data1;
   data2 : any = [];
+  dataMasse: any = [];
   tables$: Observable<Table[]>;
   total$: Observable<number>;
   constructor(public service: MasseService, public apiService : ApiService) {
@@ -23,6 +24,10 @@ export class MasseComponent implements OnInit {
 
     this.data1 = this.apiService.sayHi().subscribe(data =>{
       this.data1 =   data as object;
+    });
+
+    this.apiService.getMasse().subscribe(data =>{
+      this.dataMasse =  data as object;
     });
 
     this.apiService.getAllEmployees().subscribe(data =>{
