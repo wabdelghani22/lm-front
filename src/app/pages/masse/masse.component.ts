@@ -26,13 +26,14 @@ export class MasseComponent implements OnInit {
       this.data1 =   data as object;
     });
 
-    this.apiService.getMasse().subscribe(data =>{
+    this.apiService.getMasse('POMONA TA IDF RUNGIS').subscribe(data =>{
       this.dataMasse =  data as object;
+      // this.dataMasse =  JSON.parse(data as string); 
     });
 
-    this.apiService.getAllEmployees().subscribe(data =>{
-      this.data2 =  JSON.parse(data as string); 
-    });
+    // this.apiService.getAllEmployees().subscribe(data =>{
+    //   this.data2 =  JSON.parse(data as string); 
+    // });
     
 
 

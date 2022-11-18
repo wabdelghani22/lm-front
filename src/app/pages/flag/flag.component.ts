@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { FlagService } from './flag.service';
 import { Table } from './flag.model';
+import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-flag',
@@ -11,11 +12,18 @@ import { Table } from './flag.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class FlagComponent implements OnInit {
-
-  constructor(public service: FlagService) {
+  dataFlag: any = [];
+  constructor(public service: FlagService, public apiService : ApiService) {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
+
+    this.apiService.getaFlaguer('POMONA TA IDF RUNGIS').subscribe(data =>{
+      this.dataFlag =  data as object;
+      // this.dataMasse =  JSON.parse(data as string); 
+    });
   }
+
+  
 
   tables$: Observable<Table[]>;
   total$: Observable<number>;

@@ -34,12 +34,16 @@ export class ApiService {
       return this.http.get('http://127.0.0.1:5000/employees');
   }
 
-getMasse(){
-    return this.http.get('http://127.0.0.1:5000/masse');
+getMasse(etablissement){
+    return this.http.get('http://127.0.0.1:5000/masse?etablissement='+etablissement);
 }
 
-getBPDetails(matricule, bulletin, contrat){
-  return this.http.get('http://127.0.0.1:5000/bulletin?matricule='+matricule+'&bulletin='+bulletin+'&contrat='+contrat);
+getaFlaguer(etablissement){
+  return this.http.get('http://127.0.0.1:5000/aflaguer?etablissement='+etablissement)
+}
+
+getBPDetails(matricule){
+  return this.http.get('http://127.0.0.1:5000/bulletin?matricule='+matricule)
 }
   // Tableau de bord
 getDashbordData(etablissement) {

@@ -8,7 +8,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xl-5">
+    <div class="col-xl-12">
       <div class="card">
         <div class="card-body">
           <div class="row mb-3">
@@ -84,18 +84,15 @@
               <thead class="table-light">
                 <tr>
                   <th>Matricule</th>
-                  <th>Contrat</th>
-                  <th>Bulletin</th>
-                  <th>Catégorie</th>
+                  <th>Indication</th>
                   <th>Actions</th>
+
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let item of tableData">
-                  <th>{{item.matricule}}</th>
-                  <td>{{item.contrat}}</td>
-                  <td>{{item.bulletin}}</td>
-                  <td>{{item.categorie}}</td>
+                <tr *ngFor="let item of dataFlag">
+                  <th>{{item['Matricule']}}</th>
+                  <td>{{item['Indication']}}</td>
                   <td>
                     <div ngbDropdown placement="bottom-left">
                       <i class="mdi mdi-dots-vertical dropdown-toggle font-size-20" ngbDropdownToggle data-toggle="dropdown"
@@ -119,73 +116,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-7 d-flex">
-      <div class="card flex-fill">
-        <div class="card-body d-flex flex-column justify-content-md-between">
-          <div class="row mb-3 align-items-center">
-            <div class="col-6">
-              <h4 class="card-title mb-0">Détails du bulletin</h4>
-            </div>
-            <div class="col-6 text-md-end">
-              <div class="btn-group" role="group">
-                <input type="radio" class="btn-check" name="stat1" id="stat1" autocomplete="off" [value]="true"
-                  [(ngModel)]="vue_mensuelle">
-                <label class="btn btn-outline-warning" for="stat1">Vue Mensuelle</label>
-
-                <input type="radio" class="btn-check" name="stat2" id="stat2" autocomplete="off" [value]="false">
-                <label class="btn btn-outline-warning" for="stat2">Vue Anuelle</label>
-              </div>
-            </div>
-          </div>
-          <div class="table-responsive" style="min-height: 500px">
-            <table class="table table-centered table-nowrap">
-              <thead class="table-light">
-                <tr>
-                  <th>Matricule</th>
-                  <th>Catégorie</th>
-                  <th>Libellé</th>
-                  <th>Base</th>
-                  <th>T1</th>
-                  <th>M1</th>
-                  <th>T2</th>
-                  <th>M2</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let table of tables$ | async">
-                  <th>{{table.matricule}}</th>
-                  <td>{{table.categorie}}</td>
-                  <td>{{table.libelle}}</td>
-                  <td>{{table.base}}</td>
-                  <td>{{table.t1}}</td>
-                  <td>{{table.m1}}</td>
-                  <td>{{table.t2}}</td>
-                  <td>{{table.m2}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="row justify-content-md-between align-items-md-center mt-2">
-            <div class="col-sm-12 col-md-5">
-              <div class="dataTables_info" id="tickets-table_info" role="status" aria-live="polite">
-                <span *ngIf="service.totalRecords == 0">
-                  Affichage de {{ service.startIndex }} à {{ service.endIndex }} sur {{ service.totalRecords }} lignes
-                </span>
-                <span *ngIf="service.totalRecords != 0">
-                  Affichage de {{ service.startIndex + 1 }} à {{ service.endIndex }} sur {{ service.totalRecords }} lignes
-                </span>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-5">
-              <div class="text-md-right float-md-end pagination-rounded">
-                <ngb-pagination [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize"
-                  maxSize="3" rotate="true"></ngb-pagination>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 
 </div>

@@ -45,20 +45,23 @@ export class DashboardComponent implements OnInit {
 
 
   fillCharts(){
-    console.log(parseFloat(this.dash['$cad-Cadre']).toFixed(2))
-    console.log(parseFloat(this.dash['$agm-Agent de maitrise']).toFixed(2))
-    console.log(parseFloat(this.dash['$emp-Employé']).toFixed(2))
-    console.log(parseFloat(this.dash['$app-Apprenti employé']).toFixed(2))
+    console.log(this.dash)
+    console.log(parseFloat(this.dash[' Employé']).toFixed(2))
+    console.log(parseFloat(this.dash[' TAM']).toFixed(2))
+    console.log(parseFloat(this.dash[' Ouvrier']).toFixed(2))
+    console.log(parseFloat(this.dash[' Cadre']).toFixed(2))
+    console.log(parseFloat(this.dash[' Cadre supérieur']).toFixed(2))
+    console.log(parseFloat(this.dash[' Assimilé cadre']).toFixed(2))
     this.simplePieChart = {
       chart: {
         height: 250,
         type: 'pie',
       },
       //series: [parseFloat(this.dash['$cad-Cadre']).toFixed(2), parseFloat(this.dash['$agm-Agent de maitrise']).toFixed(2), parseFloat(this.dash['$emp-Employé']).toFixed(2), parseFloat(this.dash['$app-Apprenti employé']).toFixed(2)],
-      series: [parseFloat(this.dash['$cad-Cadre']), parseFloat(this.dash['$agm-Agent de maitrise']), parseFloat(this.dash['$emp-Employé']), parseFloat(this.dash['$app-Apprenti employé'])],
+      series: [parseFloat(this.dash[' Employé']), parseFloat(this.dash[' TAM']), parseFloat(this.dash[' Ouvrier']), parseFloat(this.dash[' Cadre']), parseFloat(this.dash[' Cadre supérieur']),parseFloat(this.dash[' Assimilé cadre'])],
       //series: [30,20,10,10],
-      labels: ['Cadre','Agent de maîtrise', 'Employé','Apprenti'],
-      colors: ['#34c38f', '#f1b44c', '#f46a6a','#556ee6'],
+      labels: [' Cadre',' TAM', ' Employé',' Ouvrier',' Cadre supérieur',' Assimilé cadre'],
+      colors: ['#34c38f', '#f1b44c', '#f46a6a','#556ee6','#696969','#F5E592'],
       legend: {
         show: true,  
         position: 'bottom',

@@ -38,7 +38,7 @@ export class TopbarComponent implements OnInit {
     };
 
     const mode = localStorage.getItem('mode')
-    this.nightModeToggle = mode == 'dark' ? true : false
+    this.nightModeToggle = mode == 'dark' ? false : true
   }
 
   /**
@@ -88,9 +88,9 @@ export class TopbarComponent implements OnInit {
     let mode: string
 
     if (this.nightModeToggle) {
-      mode = 'dark'
-    } else {
       mode = 'light'
+    } else {
+      mode = 'dark'
     }
 
     document.body.setAttribute('data-theme', mode);

@@ -7,7 +7,7 @@ import { FlagComponent } from './flag/flag.component';
 import { RubriquesComponent } from './rubriques/rubriques.component';
 import { MontantsComponent } from './montants/montants.component';
 import { BulletinComponent } from './bulletin/bulletin.component';
-
+import { AdministrationComponent } from './administration/administration.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'flag', component: FlagComponent },
   { path: 'rubriques', component: RubriquesComponent },
   { path: 'montants', component: MontantsComponent },
-  { path: 'bulletin', component: BulletinComponent }
+  { path: 'bulletin', component: BulletinComponent },
+  { path: 'administration', component: AdministrationComponent }
 ];
 
 @NgModule({

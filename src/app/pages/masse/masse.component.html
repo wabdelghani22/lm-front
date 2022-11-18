@@ -15,7 +15,9 @@
             <label class="col-md-auto col-form-label text-muted" style="font-size: 110%">Sélectionner une population :</label>
             <div class="col-md">
               <select class="form-select">
-                <option>Contrat particulier</option>
+                <option>Apprentis</option>
+                <option>Stagaire</option>
+                <option>Contrat pro</option>
               </select>
             </div>
           </div>
@@ -30,20 +32,18 @@
               <thead class="table-light">
                 <tr>
                   <th>Matricule</th>
-                  <th>Contrat</th>
-                  <th>Bulletin</th>
-                  <th>Catégorie</th>
-                  <th>Contrat particulier</th>
+                  <th>Période</th>
+                  <th>Statut</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let item of dataMasse">
                   <th>{{item['Matricule']}}</th>
-                  <td>{{item['Contrat']}}</td>
-                  <td>{{item['Bulletin']}}</td>
-                  <td>{{item['Catégorie']}}</td>
-                  <td>{{item['Contrat particulier']}}</td>
+                  <td>{{item['Periode']}}</td>
+                  <td>{{item['Statut']}}</td>
+                  <!-- <td>{{item['Catégorie']}}</td>
+                  <td>{{item['Contrat particulier']}}</td> -->
                   
                   <td>
                     <div ngbDropdown placement="bottom-left">

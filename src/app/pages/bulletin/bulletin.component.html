@@ -45,19 +45,31 @@
                 <thead class="table-light">
                   <tr>
                     <th>Matricule</th>
-                    <th>Contrat</th>
-                    <th>Nom</th>
-                    <th>Etablissement</th>
+                    <th>Période</th>
+                    <th>Statut</th>
+                    <th>CCN</th>
                     <th>Libellé</th>
+                    <th>Base</th>
+                    <th>Nombre</th>
+                    <th>Montant salarial</th>
+                    <th>Taux salarial</th>
+                    <th>Montant patronal</th>
+                    <th>Taux patronal</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let item of bpdetail">
                     <th>{{item['Matricule']}}</th>
-                    <td>{{item['Contrat']}}</td>
-                    <td>{{item['Nom']}}</td>
-                    <td>{{item['Etablissement']}}</td>
+                    <td>{{item['Periode']}}</td>
+                    <td>{{item['Statut']}}</td>
+                    <td>{{item['CCN']}}</td>
                     <td>{{item['Libellé']}}</td>
+                    <td>{{item['Base']}}</td>
+                    <td>{{item['Nombre']}}</td>
+                    <td>{{item['Montant salarial']}}</td>
+                    <td>{{item['Taux Salarial']}}</td>
+                    <td>{{item['Montant Patronal']}}</td>
+                    <td>{{item['Taux Patronal']}}</td>
                   </tr>
                 </tbody>
               </table>
